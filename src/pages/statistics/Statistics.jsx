@@ -3,7 +3,7 @@
 const Statistics = () => {
     return (
         <div>
-            <h1>statistics page</h1>
+            <h1 className="text-5xl text-center">statistics page Working on</h1>
         </div>
     );
 };

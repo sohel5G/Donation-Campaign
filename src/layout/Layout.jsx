@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom"
-import Footer from "../pages/footer/Footer"
 import Header from "../pages/header/Header"
-
+import "../style.css"
 
 function Layout() {
 
@@ -9,7 +8,6 @@ function Layout() {
     <>
       <Header></Header>
       <Outlet></Outlet>
-      <Footer></Footer>
     </>
   )
 }
