@@ -2,3 +2,17 @@
     color: #FF444A!important;
     border-bottom: 1px solid #FF444A;
 }
+
+.apexcharts-legend.apx-legend-position-bottom .apexcharts-legend-series{
+        flex-direction: row-reverse!important;
+        gap: 5px!important;
+}
+.apexcharts-legend.apx-legend-position-bottom .apexcharts-legend-series .apexcharts-legend-marker{
+    width: 90px!important;
+}
+.apexcharts-legend{
+    gap: 10px!important;
+    margin-top: 50px;
+}
+
+

@@ -11,7 +11,7 @@ const Donationeds = () => {
     const handleShowAll = () => {
         setSlicedLsDonations(lsDonations.slice(0, lsDonations.length))
     }
-    console.log(slicedLsDonations.length)
+    
     useEffect(()=> {
         const lsDonations = getStoredDonations();
         setLsDonations(lsDonations);
