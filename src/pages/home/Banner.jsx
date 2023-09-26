@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../../style.css'
 
 const Banner = ({ getSearchValue }) => {
 
@@ -8,8 +9,8 @@ const Banner = ({ getSearchValue }) => {
     }
 
     return (
-        <div className="bg-[url('../../../public/images/Banner.png')] bg-no-repeat bg-cover bg-center">
-            <div className="h-[300px] md:h-[400px] lg:h-[500px] flex justify-center items-center bg-white opacity-95">
+        <div className="custom-bg-img bg-no-repeat bg-cover bg-top center">
+            <div className="custom-bg-overlay h-[300px] md:h-[400px] lg:h-[600px] flex justify-center items-center pt-24">
                 <div className="container mx-auto px-10 ">
                     <h1 className="text-3xl lg:text-5xl text-center font-bold py-10">I Grow By Helping People In Need</h1>
                     <form className="flex justify-center items-center" onSubmit={handleSearch}>

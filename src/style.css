@@ -1,18 +1,27 @@
-.active{
-    color: #FF444A!important;
+.active {
+    color: #FF444A !important;
     border-bottom: 1px solid #FF444A;
 }
 
-.apexcharts-legend.apx-legend-position-bottom .apexcharts-legend-series{
-        flex-direction: row-reverse!important;
-        gap: 5px!important;
+.apexcharts-legend.apx-legend-position-bottom .apexcharts-legend-series {
+    flex-direction: row-reverse !important;
+    gap: 5px !important;
 }
-.apexcharts-legend.apx-legend-position-bottom .apexcharts-legend-series .apexcharts-legend-marker{
-    width: 90px!important;
+
+.apexcharts-legend.apx-legend-position-bottom .apexcharts-legend-series .apexcharts-legend-marker {
+    width: 90px !important;
 }
-.apexcharts-legend{
-    gap: 10px!important;
+
+.apexcharts-legend {
+    gap: 10px !important;
     margin-top: 50px;
 }
 
+.custom-bg-img {
+    background-image: url('../public/images/bannerBg.jpeg');
+}
 
+.custom-bg-overlay {
+    margin-top: -125px;
+    background-color: rgba(255, 255, 255, 0.92);
+}
