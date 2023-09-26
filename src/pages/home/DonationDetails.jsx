@@ -4,6 +4,7 @@ import { setStoredDonations } from "../../localstore/localStore";
 const DonationDetails = () => {
     const donations = useLoaderData();
     const { id } = useParams();
+
     const donation = donations.find(donationId => donationId.id === parseInt(id));
     const { img, price, title, description, txt_color } = donation;
 

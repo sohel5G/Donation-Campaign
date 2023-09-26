@@ -2,14 +2,10 @@ import { useState } from "react";
 import Banner from "./Banner";
 import Donations from "./donations";
 
-
-
 const Home = () => {
     const [searchValue, setSearchValue] = useState('')
     const getSearchValue = searchValue => {
-        if (searchValue){
-            setSearchValue(searchValue)
-        }
+        setSearchValue(searchValue)
     }
 
     return (

@@ -6,21 +6,16 @@ const Donations = ({ searchValue }) => {
     const [donations, setDonation] = useState([]);
     const [searchDonations, setSearchDonations] = useState([]);
     const searchValueLowerCase = searchValue.trim().toLowerCase();
+
    useEffect(()=>{
-       if (searchValueLowerCase.toLowerCase() === 'health') {
-           const healthCatDonations = donations.filter(donation => donation.category === 'Health')
-           setSearchDonations(healthCatDonations);
-       } else if (searchValueLowerCase === 'education'){
-           const educationCatDonations = donations.filter(donation => donation.category === 'Education')
-           setSearchDonations(educationCatDonations);
-       } else if (searchValueLowerCase === 'clothing') {
-           const clothingCatDonations = donations.filter(donation => donation.category === 'Clothing')
-           setSearchDonations(clothingCatDonations);
-       } else if (searchValueLowerCase === 'food') {
-           const foodCatDonations = donations.filter(donation => donation.category === 'Food')
-           setSearchDonations(foodCatDonations);
+       if (searchValueLowerCase){
+           const filterdCategories = donations.filter(donation => donation.category.toLowerCase().includes(searchValueLowerCase));
+           setSearchDonations(filterdCategories);
+       } else {
+           setSearchDonations(donations);
        }
-   }, [searchValue, searchValueLowerCase, donations])
+
+   }, [searchValue, donations, searchValueLowerCase])
 
     useEffect(() => {
         fetch('/donations.json')

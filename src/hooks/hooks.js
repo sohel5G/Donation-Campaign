@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react"
 
 const useGetDonations = () => {
@@ -5,14 +6,16 @@ const useGetDonations = () => {
 
     useEffect(() => {
         const donationData = async () => {
-            const res = await fetch('/donations.json')
+            const res = await fetch('https://jsonplaceholder.typicode.com/users')
             const data = await res.json()
             setDonation(data)
         }
         donationData()
     }, [])
+
     return [donations]
 }
+
 
 export { useGetDonations }
 

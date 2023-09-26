@@ -7,6 +7,9 @@ const Banner = ({ getSearchValue }) => {
         e.preventDefault();
         getSearchValue(e.target.catSearch.value);
     }
+    const handleSearchInput = e => {
+        e.target.value ? getSearchValue(e.target.value) : getSearchValue('');
+    }
 
     return (
         <div className="custom-bg-img bg-no-repeat bg-cover bg-top center">
@@ -14,7 +17,7 @@ const Banner = ({ getSearchValue }) => {
                 <div className="container mx-auto px-10 ">
                     <h1 className="text-3xl lg:text-5xl text-center font-bold py-10">I Grow By Helping People In Need</h1>
                     <form className="flex justify-center items-center" onSubmit={handleSearch}>
-                        <input name="catSearch" className="border-2 py-2 px-4 bg-[#ffffff] rounded-l-md" type="text" placeholder="Search category..." />
+                        <input onChange={handleSearchInput} name="catSearch" className="border-2 py-2 px-4 bg-[#ffffff] rounded-l-md" type="text" placeholder="Search category..." />
                         <input className="bg-[#FF444A] py-2 px-4 text-white cursor-pointer rounded-r-md" type="submit" value="Search" />
                     </form>
                 </div>
