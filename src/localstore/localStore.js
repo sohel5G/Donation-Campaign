@@ -19,6 +19,7 @@ const setStoredDonations = donation => {
         localStorage.setItem('donations', JSON.stringify(storedDonations))
         swal("Successfully donated to this campaign.", `${donation.title}`, "success");
     }
+
 }
 
 export { getStoredDonations, setStoredDonations }
