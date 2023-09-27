@@ -1,6 +1,6 @@
 # Donation Campaign
 
-## 3 best features of this project
+## Few best features of this project
 
 - Search donation categories and it will show all match categories 
 - Can't donate multiple campaign it will show a warnings. 
